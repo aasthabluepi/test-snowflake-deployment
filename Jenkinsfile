@@ -4,7 +4,6 @@ pipeline {
         stage('Display Jenkins Agent Setup') {
             steps {
                 sh '''
-                    apt install curl
                     python3 --version
                     printenv | sort
                     pwd
