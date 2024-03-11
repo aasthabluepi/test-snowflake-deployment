@@ -1,5 +1,4 @@
 pipeline {
-    agent any
     stages {
         stage('Display Jenkins Agent Setup') {
             steps {
