@@ -1,12 +1,19 @@
 pipeline {
-    agent { 
-        docker { 
-            image "python:3.8"
-            args '--user 0:0'
-        } 
-
-    }
+    agent any
     stages {
+        stage('Display Jenkins Agent Setup') {
+            steps {
+                sh '''
+                    apt install curl
+                    python3 --version
+                    printenv | sort
+                    pwd
+                    ls -al
+                    free -m
+                    free -g
+                '''
+            }
+               }
         stage('Run schemachange') {
             steps {
                 sh "pip install schemachange --upgrade"
