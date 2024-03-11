@@ -8,8 +8,6 @@ pipeline {
                     printenv | sort
                     pwd
                     ls -al
-                    free -m
-                    free -g
                 '''
             }
                }
