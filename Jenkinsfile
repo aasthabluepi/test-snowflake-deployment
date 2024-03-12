@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        PATH = "${env.PATH}:/Users/tecqnio/.jenkins/workspace/snowflake-devops-demo/Library/Python/3.9/bin"
+    }
     stages {
         stage('Display Jenkins Agent Setup') {
             steps {
